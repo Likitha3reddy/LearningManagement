@@ -1,0 +1,38 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container"> <!-- Adds margins on both sides -->
+        <!-- Brand Name on the Left -->
+        <a class="navbar-brand " href="#">Learn Hub</a>
+        <!-- Login Button on the Right -->
+        <div class="d-flex me-3  align-items-center ">
+            <button class="btn btn-outline-primary p-2 " type="button" (click)="login()">Login</button>
+            <a href="/student-dashboard/courses" *ngIf=authenticate style="margin-left: 15px;"><i class="fa-solid fa-circle-user fa-2xl" style="color: #5381d0;"></i></a>
+        </div>
+    </div>
+</nav>
+
+<section>
+  <div class="container mt-5">
+    <div class="row g-4 justify-content-center">
+        <!-- Card -->
+        <div class="col-lg-3 col-md-4 d-flex align-items-stretch" *ngFor="let course of courses">
+            <div class="card shadow-sm w-100 hover-effect">
+                <img [src]="course.imageUrl" class="card-img-top" alt="{{ course.title }}" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ course.title }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <div class="mt-auto">
+                        <span class="badge bg-primary">{{ course.category }}</span>
+                        <button class="btn btn-primary w-100 mt-3" (click)="enroll(course.courseId)">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer class="footer bg-dark text-center text-white mt-4 h-4 p-4">
+    &copy; 2024 Learn Hub. All Rights Reserved.
+</footer>
+

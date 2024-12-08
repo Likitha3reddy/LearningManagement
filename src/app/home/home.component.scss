@@ -1,0 +1,52 @@
+.navbar-brand{
+    font-weight: 600;
+    font-size:xx-large;
+    font-family:cursive;
+    color: sandybrown;
+
+}    
+
+
+/* Add hover effect to the entire card */
+.card {
+    height: 100%; /* Ensures the card height fills its container */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Moves the card upward */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a larger shadow */
+}
+
+/* Style for the card image */
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure proportional cropping */
+    border-bottom: 1px solid #ddd; /* Optional: Add a separator below the image */
+}
+
+/* Style for the card body */
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push the button to the bottom */
+    transition: all 0.3s ease; /* Adds smooth transition to content */
+}
+
+/* Badge Styling */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    text-transform: uppercase;
+}
+
+/* Button Styling */
+.btn {
+    transition: all 0.2s ease; /* Smooth transition for button hover */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
